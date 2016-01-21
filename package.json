@@ -1,0 +1,23 @@
+{
+	"name": "consumer-worker",
+	"version": "0.0.1",
+	"author": "yitomok",
+	"description": "A consumer worker to get exchanage rate from xe.com",
+	"keywords": [ "node.js", "javascript" ],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/yitomok/MUeOVkmOr0WC4dFh3KgRfA"
+	},
+	"license": "MIT",
+	"engines": { "node": "latest" },
+	"scripts": {
+		"start": "node consumer-worker.js",
+		"prestart": "npm install"
+	},
+	"dependencies": {
+		"bluebird": "latest",
+		"co": "latest",
+		"fivebeans": "latest",
+		"mongodb": "latest"
+	}
+}
