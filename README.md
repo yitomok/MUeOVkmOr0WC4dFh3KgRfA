@@ -1,3 +1,9 @@
+## How to run?
+---
+```
+$ npm start
+```
+
 ## The challenge
 ---
 
