@@ -1,10 +1,10 @@
 'use strict'
 
-var https = require('https')
-var Promise = require('bluebird')
-var co = require('co')
-var fivebeans = require('fivebeans')
-var mongodb = require('mongodb')
+const https = require('https')
+const Promise = require('bluebird')
+const co = require('co')
+const fivebeans = require('fivebeans')
+const mongodb = require('mongodb')
 
 /**
  * Return a Promise connecting to a beanstalkd instance
@@ -93,8 +93,8 @@ co(function*() {
 			'rate': rate.toFixed(2).toString()
 		})
 
-		//destroy job, reput new job to tube
-		yield client.destroyAsync(data[0])
+		//if fail < 3, destroy job, reput new job to tube, else bury the job
+		yield req.fail < 3 ? client.destroyAsync(data[0]) : client.buryAsync(data[0], 0)
 		if (req.succ < 10 && req.fail < 3)
 			yield client.putAsync(0, delay, 120, JSON.stringify(req))
 	}
