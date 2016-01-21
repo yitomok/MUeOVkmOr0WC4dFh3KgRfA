@@ -54,7 +54,7 @@ function getDataAsync(payload) {
 
 //main routine using co module
 co(function*() {
-	const tubes = ['yitomok']
+	const tubes = [ 'yitomok' ]
 	const db_uri = 'mongodb://backend-lv3:backend-lv3@ds058548.mongolab.com:58548/backend-lv3'
 
 	const res = yield [ connectAsync('localhost', 11300), mongodb.MongoClient.connect(db_uri, { promiseLibrary: Promise }) ]
@@ -65,7 +65,7 @@ co(function*() {
 	for(;;) {
 		//fetch job from tube
 		const data = yield client.reserveAsync()
-		console.log(['job', data[0], 'payload is', data[1]].join(' '))
+		console.log([ 'job', data[0], 'payload is', data[1] ].join(' '))
 		let req = JSON.parse(data[1])
 		if (!req.hasOwnProperty('succ')) {
 			req.succ = 0
@@ -77,7 +77,7 @@ co(function*() {
 		let rate = -1
 		try {
 			rate = yield getDataAsync(req)
-			console.log(['job', data[0], 'rate is', rate].join(' '))
+			console.log([ 'job', data[0], 'rate is', rate ].join(' '))
 			req.succ += 1
 		} catch (err) {
 			console.error(err)
