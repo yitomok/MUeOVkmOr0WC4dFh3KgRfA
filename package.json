@@ -1,5 +1,6 @@
 {
 	"name": "consumer-worker",
+	"main": "consumer-worker.js",
 	"version": "0.0.1",
 	"author": "yitomok",
 	"description": "A consumer worker to get exchanage rate from xe.com",
@@ -19,5 +20,9 @@
 		"co": "latest",
 		"fivebeans": "latest",
 		"mongodb": "latest"
+	},
+	"devDependencies": {
+		"mocha": "latest"
+		"chai": "latest"
 	}
 }
