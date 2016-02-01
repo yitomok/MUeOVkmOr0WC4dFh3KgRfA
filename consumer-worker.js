@@ -13,16 +13,14 @@ const mongodb = require('mongodb')
  * @param {string} host - hostname or IP address
  * @param {number} port - port
  */
-function connectAsync(host, port) {
-	return new Promise((resolve, reject) => {
-		let client = new fivebeans.client(host, port)
-		Promise.promisifyAll(client, { multiArgs: true })
+const connectAsync = (host, port) => new Promise((resolve, reject) => {
+	let client = new fivebeans.client(host, port)
+	Promise.promisifyAll(client, { multiArgs: true })
 
-		client.on('connect', () => resolve(client))
-			.on('error', err => reject(err))
-			.connect()
-	})
-}
+	client.on('connect', () => resolve(client))
+		.on('error', err => reject(err))
+		.connect()
+})
 
 /**
  * Return a Promise getting rate data
@@ -30,27 +28,25 @@ function connectAsync(host, port) {
  * @function
  * @param {object} payload - A payload from beanstalkd
  */
-function getDataAsync(payload) {
-	return new Promise((resolve, reject) => {
-		const app_id = '32c0deeb3a8f431c953dfd317c0005a0'
-		const options = {
-			hostname: 'openexchangerates.org',
-			port: 443,
-			// Free API only support USD -> others :(
-			// path: '/api/latest.json?app_id=' + app_id + '&base=' + from + '&symbols=' + to,
-			path: '/api/latest.json?app_id=' + app_id,
-			method: 'GET'
-		}
+const getDataAsync = payload => new Promise((resolve, reject) => {
+	const app_id = '32c0deeb3a8f431c953dfd317c0005a0'
+	const options = {
+		hostname: 'openexchangerates.org',
+		port: 443,
+		// Free API only support USD -> others :(
+		// path: '/api/latest.json?app_id=' + app_id + '&base=' + from + '&symbols=' + to,
+		path: '/api/latest.json?app_id=' + app_id,
+		method: 'GET'
+	}
 
-		let req = https.request(options, res => {
-			let data = ''
-			res.on('data', d => { data += d })
-			res.on('end', () => resolve(JSON.parse(data).rates[payload.to]))
-		})
-		req.end()
-		req.on('error', err => reject(err))
+	const req = https.request(options, res => {
+		let data = ''
+		res.on('data', d => { data += d })
+		res.on('end', () => resolve(JSON.parse(data).rates[payload.to]))
 	})
-}
+	req.end()
+	req.on('error', err => reject(err))
+})
 
 //main routine using co module
 co(function*() {
