@@ -67,9 +67,9 @@ co(function*() {
 			delay: 60
 		}
 		try {
-			action.update = yield {$inc: {success: 1}, $push: {rates: getDataAsync(req.from, req.to)}}
+			action.update = yield {$inc: {success: 1}, $push: {rates: {value: getDataAsync(req.from, req.to)}}}
 		} catch (err) {
-			action.update = {$inc: {failure: 1}, $push: {rates: '-1'}}
+			action.update = {$inc: {failure: 1}, $push: {rates: {value: '-1'}}}
 			action.delay = 3
 		} finally {
 			//save to mongodb
