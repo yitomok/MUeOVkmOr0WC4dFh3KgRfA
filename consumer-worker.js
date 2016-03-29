@@ -1,20 +1,22 @@
 'use strict'
 
-const https = require('https')
+const rp = require('request-promise')
 const Promise = require('bluebird')
 const co = require('co')
 const fivebeans = require('fivebeans')
-const mongodb = require('mongodb')
+const mongoose = require('mongoose')
+mongoose.Promise = Promise
+const Rate = require('./rate')(mongoose)
 
 /**
- * Return a Promise connecting to a beanstalkd instance
+ * Return a generator function connecting to a beanstalkd instance
  *
  * @function
  * @param {string} host - hostname or IP address
  * @param {number} port - port
  */
 const connectAsync = (host, port) => new Promise((resolve, reject) => {
-	let client = new fivebeans.client(host, port)
+	const client = new fivebeans.client(host, port)
 	Promise.promisifyAll(client, { multiArgs: true })
 
 	client.on('connect', () => resolve(client))
@@ -23,78 +25,66 @@ const connectAsync = (host, port) => new Promise((resolve, reject) => {
 })
 
 /**
- * Return a Promise getting rate data
+ * Return a generator function getting rate data
  *
  * @function
- * @param {object} payload - A payload from beanstalkd
+ * @param {string} from - Currency convert from
+ * @param {string} to - Currency convert to
  */
-const getDataAsync = payload => new Promise((resolve, reject) => {
-	const app_id = '32c0deeb3a8f431c953dfd317c0005a0'
-	const options = {
-		hostname: 'openexchangerates.org',
-		port: 443,
-		// Free API only support USD -> others :(
-		// path: '/api/latest.json?app_id=' + app_id + '&base=' + from + '&symbols=' + to,
-		path: '/api/latest.json?app_id=' + app_id,
-		method: 'GET'
-	}
-
-	const req = https.request(options, res => {
-		let data = ''
-		res.on('data', d => { data += d })
-		res.on('end', () => resolve(JSON.parse(data).rates[payload.to]))
-	})
-	req.end()
-	req.on('error', err => reject(err))
-})
+const getDataAsync = function*(from, to) {
+	return (yield rp({
+		uri: 'https://openexchangerates.org/api/latest.json',
+		// Free API only support USD -> others
+		// qs: {app_id: '32c0deeb3a8f431c953dfd317c0005a0', base: from, symbols: to}
+		qs: {app_id: '32c0deeb3a8f431c953dfd317c0005a0'},
+		headers: {'User-Agent': 'Request-Promise'},
+		json: true
+	})).rates[to].toFixed(2).toString()
+}
 
 //main routine using co module
 co(function*() {
 	const tubes = [ 'yitomok' ]
-	const db_uri = 'mongodb://backend-lv3:backend-lv3@ds058548.mongolab.com:58548/backend-lv3'
+	const db_uri = 'mongodb://backend-lv3:backend-lv3@ds058548.mlab.com:58548/backend-lv3'
 
-	const res = yield [ connectAsync('localhost', 11300), mongodb.MongoClient.connect(db_uri, { promiseLibrary: Promise }) ]
-	const client = res[0]
-	const db = res[1]
-	yield [ client.useAsync(tubes), client.watchAsync(tubes) ]
+	const client = yield connectAsync('localhost', 11300)
+	mongoose.connect(db_uri)
+	yield client.watchAsync(tubes)
 
-	for(;;) {
+	for(let quit = false; !quit;) {
 		//fetch job from tube
 		const data = yield client.reserveAsync()
-		console.log([ 'job', data[0], 'payload is', data[1] ].join(' '))
-		let req = JSON.parse(data[1])
-		if (!req.hasOwnProperty('succ')) {
-			req.succ = 0
-			req.fail = 0
+		const req = JSON.parse(data[1])
+		if (req.stop) {
+			quit = true
+			yield client.destroyAsync(data[0])
+			continue
 		}
 
 		//fetch rate from provider
-		let delay = 60
-		let rate = -1
-		try {
-			rate = yield getDataAsync(req)
-			console.log([ 'job', data[0], 'rate is', rate ].join(' '))
-			req.succ += 1
-		} catch (err) {
-			console.error(err)
-			req.fail += 1
-			delay = 3
+		const action = {
+			conditions: {refId: data[0], from: req.from, to: req.to},
+			delay: 60
 		}
-
-		//save to mongodb
-		yield db.collection('rates').insertOne({
-			'from': req.from,
-			'to': req.to,
-			'created_at': new Date(),
-			'rate': rate.toFixed(2).toString()
-		})
-
-		//if fail < 3, destroy job, reput new job to tube, else bury the job
-		yield req.fail < 3 ? client.destroyAsync(data[0]) : client.buryAsync(data[0], 0)
-		if (req.succ < 10 && req.fail < 3)
-			yield client.putAsync(0, delay, 120, JSON.stringify(req))
+		try {
+			action.update = yield {$inc: {success: 1}, $push: {rates: getDataAsync(req.from, req.to)}}
+		} catch (err) {
+			action.update = {$inc: {failure: 1}, $push: {rates: '-1'}}
+			action.delay = 3
+		} finally {
+			//save to mongodb
+			const rateObj = yield Rate.findOneAndUpdate(action.conditions, action.update, {upsert: true, setDefaultsOnInsert: true, new: true}).exec()
+			//process the job 10 times, if failed 3 times, bury the job
+			if (rateObj.success < 10 && rateObj.failure < 3) {
+				yield client.releaseAsync(data[0], 0, action.delay)
+			} else {
+				yield rateObj.failure < 3 ? client.destroyAsync(data[0]) : client.buryAsync(data[0], 0)
+			}
+		}
 	}
 
 	//cleanup stuff
-	yield [ client.quitAsync(), db.close() ]
+	yield client.ignoreAsync(tubes)
+	mongoose.disconnect()
+	yield client.quitAsync()
 }).catch(err => { console.error(err) })

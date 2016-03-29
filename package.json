@@ -1,7 +1,7 @@
 {
 	"name": "consumer-worker",
 	"main": "consumer-worker.js",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"author": "yitomok",
 	"description": "A consumer worker to get exchanage rate from xe.com",
 	"keywords": [ "node.js", "javascript" ],
@@ -19,7 +19,8 @@
 		"bluebird": "latest",
 		"co": "latest",
 		"fivebeans": "latest",
-		"mongodb": "latest"
+		"mongoose": "latest",
+		"request-promise": "latest"
 	},
 	"devDependencies": {
 		"mocha": "latest",
