@@ -4,9 +4,7 @@ const rp = require('request-promise')
 const Promise = require('bluebird')
 const co = require('co')
 const fivebeans = require('fivebeans')
-const mongoose = require('mongoose')
-mongoose.Promise = Promise
-const Rate = require('./rate')(mongoose)
+const mongodb = require('mongodb')
 
 /**
  * Return a generator function connecting to a beanstalkd instance
@@ -45,8 +43,9 @@ co(function*() {
 	const tubes = [ 'yitomok' ]
 	const db_uri = 'mongodb://backend-lv3:backend-lv3@ds058548.mlab.com:58548/backend-lv3'
 
-	const client = yield connectAsync('localhost', 11300)
-	mongoose.connect(db_uri)
+	const res = yield [ connectAsync('localhost', 11300), mongodb.MongoClient.connect(db_uri, { promiseLibrary: Promise }) ]
+	const client = res[0]
+	const db = res[1]
 	yield client.watchAsync(tubes)
 
 	for(let quit = false; !quit;) {
@@ -64,25 +63,33 @@ co(function*() {
 			conditions: {refId: data[0], from: req.from, to: req.to},
 			delay: 60
 		}
+		let rate = yield db.collection('rates').findOne(action.conditions)
+		if (!rate) {
+			rate = action.conditions
+			rate.success = 0
+			rate.failure = 0
+			rate.rates = []
+		}
 		try {
-			action.update = yield {$inc: {success: 1}, $push: {rates: {value: getDataAsync(req.from, req.to)}}}
+			rate.rates.push(yield {value: getDataAsync(req.from, req.to), created_at: new Date()})
+			rate.success += 1
 		} catch (err) {
-			action.update = {$inc: {failure: 1}, $push: {rates: {value: '-1'}}}
+			rate.rates.push({value: '-1', created_at: new Date()})
+			rate.failure += 1
 			action.delay = 3
 		} finally {
 			//save to mongodb
-			const rateObj = yield Rate.findOneAndUpdate(action.conditions, action.update, {upsert: true, setDefaultsOnInsert: true, new: true}).exec()
+			yield db.collection('rates').updateOne(action.conditions, rate, {upsert: true})
 			//process the job 10 times, if failed 3 times, bury the job
-			if (rateObj.success < 10 && rateObj.failure < 3) {
+			if (rate.success < 10 && rate.failure < 3) {
 				yield client.releaseAsync(data[0], 0, action.delay)
 			} else {
-				yield rateObj.failure < 3 ? client.destroyAsync(data[0]) : client.buryAsync(data[0], 0)
+				yield rate.failure < 3 ? client.destroyAsync(data[0]) : client.buryAsync(data[0], 0)
 			}
 		}
 	}
 
 	//cleanup stuff
 	yield client.ignoreAsync(tubes)
-	mongoose.disconnect()
-	yield client.quitAsync()
+	yield [ db.close(), client.quitAsync() ]
 }).catch(err => { console.error(err) })
