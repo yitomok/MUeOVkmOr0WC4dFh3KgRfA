@@ -1,342 +1,342 @@
-put 0 0 60 43
-{"from":"USD","to":"AED","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"AFN","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"ALL","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"AMD","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"ANG","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"AOA","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"ARS","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"AUD","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"AWG","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"AZN","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"BAM","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"BBD","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"BDT","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"BGN","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"BHD","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"BIF","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"BMD","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"BND","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"BOB","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"BRL","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"BSD","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"BTC","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"BTN","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"BWP","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"BYR","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"BZD","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"CAD","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"CDF","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"CHF","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"CLF","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"CLP","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"CNY","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"COP","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"CRC","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"CUC","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"CUP","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"CVE","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"CZK","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"DJF","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"DKK","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"DOP","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"DZD","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"EEK","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"EGP","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"ERN","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"ETB","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"EUR","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"FJD","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"FKP","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"GBP","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"GEL","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"GGP","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"GHS","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"GIP","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"GMD","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"GNF","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"GTQ","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"GYD","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"HKD","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"HNL","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"HRK","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"HTG","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"HUF","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"IDR","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"ILS","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"IMP","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"INR","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"IQD","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"IRR","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"ISK","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"JEP","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"JMD","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"JOD","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"JPY","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"KES","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"KGS","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"KHR","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"KMF","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"KPW","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"KRW","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"KWD","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"KYD","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"KZT","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"LAK","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"LBP","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"LKR","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"LRD","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"LSL","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"LTL","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"LVL","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"LYD","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"MAD","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"MDL","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"MGA","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"MKD","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"MMK","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"MNT","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"MOP","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"MRO","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"MTL","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"MUR","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"MVR","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"MWK","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"MXN","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"MYR","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"MZN","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"NAD","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"NGN","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"NIO","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"NOK","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"NPR","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"NZD","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"OMR","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"PAB","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"PEN","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"PGK","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"PHP","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"PKR","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"PLN","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"PYG","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"QAR","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"RON","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"RSD","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"RUB","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"RWF","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"SAR","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"SBD","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"SCR","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"SDG","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"SEK","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"SGD","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"SHP","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"SLL","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"SOS","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"SRD","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"STD","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"SVC","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"SYP","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"SZL","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"THB","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"TJS","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"TMT","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"TND","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"TOP","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"TRY","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"TTD","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"TWD","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"TZS","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"UAH","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"UGX","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"USD","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"UYU","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"UZS","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"VEF","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"VND","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"VUV","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"WST","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"XAF","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"XAG","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"XAU","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"XCD","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"XDR","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"XOF","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"XPD","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"XPF","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"XPT","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"YER","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"ZAR","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"ZMK","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"ZMW","succ":0,"fail":0}
-put 0 0 60 43
-{"from":"USD","to":"ZWL","succ":0,"fail":0}
+put 0 0 60 25
+{"from":"USD","to":"AED"}
+put 0 0 60 25
+{"from":"USD","to":"AFN"}
+put 0 0 60 25
+{"from":"USD","to":"ALL"}
+put 0 0 60 25
+{"from":"USD","to":"AMD"}
+put 0 0 60 25
+{"from":"USD","to":"ANG"}
+put 0 0 60 25
+{"from":"USD","to":"AOA"}
+put 0 0 60 25
+{"from":"USD","to":"ARS"}
+put 0 0 60 25
+{"from":"USD","to":"AUD"}
+put 0 0 60 25
+{"from":"USD","to":"AWG"}
+put 0 0 60 25
+{"from":"USD","to":"AZN"}
+put 0 0 60 25
+{"from":"USD","to":"BAM"}
+put 0 0 60 25
+{"from":"USD","to":"BBD"}
+put 0 0 60 25
+{"from":"USD","to":"BDT"}
+put 0 0 60 25
+{"from":"USD","to":"BGN"}
+put 0 0 60 25
+{"from":"USD","to":"BHD"}
+put 0 0 60 25
+{"from":"USD","to":"BIF"}
+put 0 0 60 25
+{"from":"USD","to":"BMD"}
+put 0 0 60 25
+{"from":"USD","to":"BND"}
+put 0 0 60 25
+{"from":"USD","to":"BOB"}
+put 0 0 60 25
+{"from":"USD","to":"BRL"}
+put 0 0 60 25
+{"from":"USD","to":"BSD"}
+put 0 0 60 25
+{"from":"USD","to":"BTC"}
+put 0 0 60 25
+{"from":"USD","to":"BTN"}
+put 0 0 60 25
+{"from":"USD","to":"BWP"}
+put 0 0 60 25
+{"from":"USD","to":"BYR"}
+put 0 0 60 25
+{"from":"USD","to":"BZD"}
+put 0 0 60 25
+{"from":"USD","to":"CAD"}
+put 0 0 60 25
+{"from":"USD","to":"CDF"}
+put 0 0 60 25
+{"from":"USD","to":"CHF"}
+put 0 0 60 25
+{"from":"USD","to":"CLF"}
+put 0 0 60 25
+{"from":"USD","to":"CLP"}
+put 0 0 60 25
+{"from":"USD","to":"CNY"}
+put 0 0 60 25
+{"from":"USD","to":"COP"}
+put 0 0 60 25
+{"from":"USD","to":"CRC"}
+put 0 0 60 25
+{"from":"USD","to":"CUC"}
+put 0 0 60 25
+{"from":"USD","to":"CUP"}
+put 0 0 60 25
+{"from":"USD","to":"CVE"}
+put 0 0 60 25
+{"from":"USD","to":"CZK"}
+put 0 0 60 25
+{"from":"USD","to":"DJF"}
+put 0 0 60 25
+{"from":"USD","to":"DKK"}
+put 0 0 60 25
+{"from":"USD","to":"DOP"}
+put 0 0 60 25
+{"from":"USD","to":"DZD"}
+put 0 0 60 25
+{"from":"USD","to":"EEK"}
+put 0 0 60 25
+{"from":"USD","to":"EGP"}
+put 0 0 60 25
+{"from":"USD","to":"ERN"}
+put 0 0 60 25
+{"from":"USD","to":"ETB"}
+put 0 0 60 25
+{"from":"USD","to":"EUR"}
+put 0 0 60 25
+{"from":"USD","to":"FJD"}
+put 0 0 60 25
+{"from":"USD","to":"FKP"}
+put 0 0 60 25
+{"from":"USD","to":"GBP"}
+put 0 0 60 25
+{"from":"USD","to":"GEL"}
+put 0 0 60 25
+{"from":"USD","to":"GGP"}
+put 0 0 60 25
+{"from":"USD","to":"GHS"}
+put 0 0 60 25
+{"from":"USD","to":"GIP"}
+put 0 0 60 25
+{"from":"USD","to":"GMD"}
+put 0 0 60 25
+{"from":"USD","to":"GNF"}
+put 0 0 60 25
+{"from":"USD","to":"GTQ"}
+put 0 0 60 25
+{"from":"USD","to":"GYD"}
+put 0 0 60 25
+{"from":"USD","to":"HKD"}
+put 0 0 60 25
+{"from":"USD","to":"HNL"}
+put 0 0 60 25
+{"from":"USD","to":"HRK"}
+put 0 0 60 25
+{"from":"USD","to":"HTG"}
+put 0 0 60 25
+{"from":"USD","to":"HUF"}
+put 0 0 60 25
+{"from":"USD","to":"IDR"}
+put 0 0 60 25
+{"from":"USD","to":"ILS"}
+put 0 0 60 25
+{"from":"USD","to":"IMP"}
+put 0 0 60 25
+{"from":"USD","to":"INR"}
+put 0 0 60 25
+{"from":"USD","to":"IQD"}
+put 0 0 60 25
+{"from":"USD","to":"IRR"}
+put 0 0 60 25
+{"from":"USD","to":"ISK"}
+put 0 0 60 25
+{"from":"USD","to":"JEP"}
+put 0 0 60 25
+{"from":"USD","to":"JMD"}
+put 0 0 60 25
+{"from":"USD","to":"JOD"}
+put 0 0 60 25
+{"from":"USD","to":"JPY"}
+put 0 0 60 25
+{"from":"USD","to":"KES"}
+put 0 0 60 25
+{"from":"USD","to":"KGS"}
+put 0 0 60 25
+{"from":"USD","to":"KHR"}
+put 0 0 60 25
+{"from":"USD","to":"KMF"}
+put 0 0 60 25
+{"from":"USD","to":"KPW"}
+put 0 0 60 25
+{"from":"USD","to":"KRW"}
+put 0 0 60 25
+{"from":"USD","to":"KWD"}
+put 0 0 60 25
+{"from":"USD","to":"KYD"}
+put 0 0 60 25
+{"from":"USD","to":"KZT"}
+put 0 0 60 25
+{"from":"USD","to":"LAK"}
+put 0 0 60 25
+{"from":"USD","to":"LBP"}
+put 0 0 60 25
+{"from":"USD","to":"LKR"}
+put 0 0 60 25
+{"from":"USD","to":"LRD"}
+put 0 0 60 25
+{"from":"USD","to":"LSL"}
+put 0 0 60 25
+{"from":"USD","to":"LTL"}
+put 0 0 60 25
+{"from":"USD","to":"LVL"}
+put 0 0 60 25
+{"from":"USD","to":"LYD"}
+put 0 0 60 25
+{"from":"USD","to":"MAD"}
+put 0 0 60 25
+{"from":"USD","to":"MDL"}
+put 0 0 60 25
+{"from":"USD","to":"MGA"}
+put 0 0 60 25
+{"from":"USD","to":"MKD"}
+put 0 0 60 25
+{"from":"USD","to":"MMK"}
+put 0 0 60 25
+{"from":"USD","to":"MNT"}
+put 0 0 60 25
+{"from":"USD","to":"MOP"}
+put 0 0 60 25
+{"from":"USD","to":"MRO"}
+put 0 0 60 25
+{"from":"USD","to":"MTL"}
+put 0 0 60 25
+{"from":"USD","to":"MUR"}
+put 0 0 60 25
+{"from":"USD","to":"MVR"}
+put 0 0 60 25
+{"from":"USD","to":"MWK"}
+put 0 0 60 25
+{"from":"USD","to":"MXN"}
+put 0 0 60 25
+{"from":"USD","to":"MYR"}
+put 0 0 60 25
+{"from":"USD","to":"MZN"}
+put 0 0 60 25
+{"from":"USD","to":"NAD"}
+put 0 0 60 25
+{"from":"USD","to":"NGN"}
+put 0 0 60 25
+{"from":"USD","to":"NIO"}
+put 0 0 60 25
+{"from":"USD","to":"NOK"}
+put 0 0 60 25
+{"from":"USD","to":"NPR"}
+put 0 0 60 25
+{"from":"USD","to":"NZD"}
+put 0 0 60 25
+{"from":"USD","to":"OMR"}
+put 0 0 60 25
+{"from":"USD","to":"PAB"}
+put 0 0 60 25
+{"from":"USD","to":"PEN"}
+put 0 0 60 25
+{"from":"USD","to":"PGK"}
+put 0 0 60 25
+{"from":"USD","to":"PHP"}
+put 0 0 60 25
+{"from":"USD","to":"PKR"}
+put 0 0 60 25
+{"from":"USD","to":"PLN"}
+put 0 0 60 25
+{"from":"USD","to":"PYG"}
+put 0 0 60 25
+{"from":"USD","to":"QAR"}
+put 0 0 60 25
+{"from":"USD","to":"RON"}
+put 0 0 60 25
+{"from":"USD","to":"RSD"}
+put 0 0 60 25
+{"from":"USD","to":"RUB"}
+put 0 0 60 25
+{"from":"USD","to":"RWF"}
+put 0 0 60 25
+{"from":"USD","to":"SAR"}
+put 0 0 60 25
+{"from":"USD","to":"SBD"}
+put 0 0 60 25
+{"from":"USD","to":"SCR"}
+put 0 0 60 25
+{"from":"USD","to":"SDG"}
+put 0 0 60 25
+{"from":"USD","to":"SEK"}
+put 0 0 60 25
+{"from":"USD","to":"SGD"}
+put 0 0 60 25
+{"from":"USD","to":"SHP"}
+put 0 0 60 25
+{"from":"USD","to":"SLL"}
+put 0 0 60 25
+{"from":"USD","to":"SOS"}
+put 0 0 60 25
+{"from":"USD","to":"SRD"}
+put 0 0 60 25
+{"from":"USD","to":"STD"}
+put 0 0 60 25
+{"from":"USD","to":"SVC"}
+put 0 0 60 25
+{"from":"USD","to":"SYP"}
+put 0 0 60 25
+{"from":"USD","to":"SZL"}
+put 0 0 60 25
+{"from":"USD","to":"THB"}
+put 0 0 60 25
+{"from":"USD","to":"TJS"}
+put 0 0 60 25
+{"from":"USD","to":"TMT"}
+put 0 0 60 25
+{"from":"USD","to":"TND"}
+put 0 0 60 25
+{"from":"USD","to":"TOP"}
+put 0 0 60 25
+{"from":"USD","to":"TRY"}
+put 0 0 60 25
+{"from":"USD","to":"TTD"}
+put 0 0 60 25
+{"from":"USD","to":"TWD"}
+put 0 0 60 25
+{"from":"USD","to":"TZS"}
+put 0 0 60 25
+{"from":"USD","to":"UAH"}
+put 0 0 60 25
+{"from":"USD","to":"UGX"}
+put 0 0 60 25
+{"from":"USD","to":"USD"}
+put 0 0 60 25
+{"from":"USD","to":"UYU"}
+put 0 0 60 25
+{"from":"USD","to":"UZS"}
+put 0 0 60 25
+{"from":"USD","to":"VEF"}
+put 0 0 60 25
+{"from":"USD","to":"VND"}
+put 0 0 60 25
+{"from":"USD","to":"VUV"}
+put 0 0 60 25
+{"from":"USD","to":"WST"}
+put 0 0 60 25
+{"from":"USD","to":"XAF"}
+put 0 0 60 25
+{"from":"USD","to":"XAG"}
+put 0 0 60 25
+{"from":"USD","to":"XAU"}
+put 0 0 60 25
+{"from":"USD","to":"XCD"}
+put 0 0 60 25
+{"from":"USD","to":"XDR"}
+put 0 0 60 25
+{"from":"USD","to":"XOF"}
+put 0 0 60 25
+{"from":"USD","to":"XPD"}
+put 0 0 60 25
+{"from":"USD","to":"XPF"}
+put 0 0 60 25
+{"from":"USD","to":"XPT"}
+put 0 0 60 25
+{"from":"USD","to":"YER"}
+put 0 0 60 25
+{"from":"USD","to":"ZAR"}
+put 0 0 60 25
+{"from":"USD","to":"ZMK"}
+put 0 0 60 25
+{"from":"USD","to":"ZMW"}
+put 0 0 60 25
+{"from":"USD","to":"ZWL"}
