@@ -23,6 +23,24 @@ const connectAsync = (host, port) => new Promise((resolve, reject) => {
 })
 
 /**
+ * Return a generator function getting beanstalkd location
+ *
+ * @function
+ * @param {string} apiKey - API Key to grant access
+ */
+const getHostInfo = function*(apiKey) {
+	return (yield rp({
+		uri: 'http://challenge.aftership.net:9578/v1/beanstalkd',
+		headers: {
+			'User-Agent': 'Request-Promise',
+			'aftership-api-key': apiKey || 'a6403a2b-af21-47c5-aab5-a2420d20bbec'
+		},
+		json: true,
+		method: 'POST'
+	})).data
+}
+
+/**
  * Return a generator function getting rate data
  *
  * @function
@@ -42,8 +60,9 @@ const getDataAsync = function*(from, to) {
 co(function*() {
 	const tubes = [ 'yitomok' ]
 	const db_uri = 'mongodb://backend-lv3:backend-lv3@ds058548.mlab.com:58548/backend-lv3'
+	const beanstalk = yield getHostInfo()
 
-	const res = yield [ connectAsync('localhost', 11300), mongodb.MongoClient.connect(db_uri, { promiseLibrary: Promise }) ]
+	const res = yield [ connectAsync(beanstalk.host, beanstalk.port), mongodb.MongoClient.connect(db_uri, { promiseLibrary: Promise }) ]
 	const client = res[0]
 	const db = res[1]
 	yield client.watchAsync(tubes)

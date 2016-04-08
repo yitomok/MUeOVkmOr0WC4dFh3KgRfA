@@ -1,9 +1,9 @@
 {
 	"name": "consumer-worker",
-	"main": "consumer-worker.js",
-	"version": "0.0.3",
+	"main": "consumer-worker-native.js",
+	"version": "0.0.4",
 	"author": "yitomok",
-	"description": "A consumer worker to get exchanage rate from xe.com",
+	"description": "A consumer worker to get exchanage rate from fixer.io",
 	"keywords": [ "node.js", "javascript" ],
 	"repository": {
 		"type": "git",
@@ -12,7 +12,7 @@
 	"license": "MIT",
 	"engines": { "node": "latest" },
 	"scripts": {
-		"start": "node consumer-worker.js",
+		"start": "node consumer-worker-native.js",
 		"prestart": "npm install"
 	},
 	"dependencies": {
