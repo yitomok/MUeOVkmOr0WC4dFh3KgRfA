@@ -70,16 +70,17 @@ co(function*() {
 	for(let quit = false; !quit;) {
 		//fetch job from tube
 		const data = yield client.reserveAsync()
+		const jobId = Number(data[0])
 		const req = JSON.parse(data[1])
 		if (req.stop) {
 			quit = true
-			yield client.destroyAsync(data[0])
+			yield client.destroyAsync(jobId)
 			continue
 		}
 
 		//fetch rate from provider
 		const action = {
-			conditions: {refId: data[0], from: req.from, to: req.to},
+			conditions: {refId: jobId, from: req.from, to: req.to},
 			delay: 60
 		}
 		let rate = yield db.collection('rates').findOne(action.conditions)
@@ -101,9 +102,9 @@ co(function*() {
 			yield db.collection('rates').updateOne(action.conditions, rate, {upsert: true})
 			//process the job 10 times, if failed 3 times, bury the job
 			if (rate.success < 10 && rate.failure < 3) {
-				yield client.releaseAsync(data[0], 0, action.delay)
+				yield client.releaseAsync(jobId, 0, action.delay)
 			} else {
-				yield rate.failure < 3 ? client.destroyAsync(data[0]) : client.buryAsync(data[0], 0)
+				yield rate.failure < 3 ? client.destroyAsync(jobId) : client.buryAsync(jobId, 0)
 			}
 		}
 	}
