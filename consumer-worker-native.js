@@ -1,10 +1,10 @@
 'use strict'
 
-const rp = require('request-promise')
 const Promise = require('bluebird')
 const co = require('co')
 const fivebeans = require('fivebeans')
 const mongodb = require('mongodb')
+const rp = Promise.promisifyAll(require('request'))
 
 /**
  * Return a generator function connecting to a beanstalkd instance
@@ -29,15 +29,10 @@ const connectAsync = (host, port) => new Promise((resolve, reject) => {
  * @param {string} apiKey - API Key to grant access
  */
 const getHostInfo = function*(apiKey) {
-	return (yield rp({
-		uri: 'http://challenge.aftership.net:9578/v1/beanstalkd',
-		headers: {
-			'User-Agent': 'Request-Promise',
-			'aftership-api-key': apiKey || 'a6403a2b-af21-47c5-aab5-a2420d20bbec'
-		},
-		json: true,
-		method: 'POST'
-	})).data
+	return (yield rp.postAsync('http://challenge.aftership.net:9578/v1/beanstalkd', {
+		headers: { 'aftership-api-key': apiKey || 'a6403a2b-af21-47c5-aab5-a2420d20bbec' },
+		json: true
+	})).body.data
 }
 
 /**
@@ -48,12 +43,10 @@ const getHostInfo = function*(apiKey) {
  * @param {string} to - Currency convert to
  */
 const getDataAsync = function*(from, to) {
-	return (yield rp({
-		uri: 'https://api.fixer.io/latest',
+	return (yield rp.getAsync('https://api.fixer.io/latest', {
 		qs: {base: from, symbols: to},
-		headers: {'User-Agent': 'Request-Promise'},
 		json: true
-	})).rates[to].toFixed(2).toString()
+	})).body.rates[to].toFixed(2).toString()
 }
 
 //main routine using co module

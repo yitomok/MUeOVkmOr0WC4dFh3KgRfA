@@ -21,7 +21,7 @@
 		"fivebeans": "latest",
 		"mongodb": "latest",
 		"mongoose": "latest",
-		"request-promise": "latest"
+		"request": "latest"
 	},
 	"devDependencies": {
 		"mocha": "latest",
