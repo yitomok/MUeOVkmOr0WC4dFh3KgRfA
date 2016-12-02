@@ -50,7 +50,7 @@ const getDataAsync = function*(from, to) {
 }
 
 //main routine using co module
-co(function*() {
+const main = function*() {
 	const tubes = [ 'yitomok' ]
 	const db_uri = 'mongodb://backend-lv3:backend-lv3@ds058548.mlab.com:58548/backend-lv3'
 	const beanstalk = yield getHostInfo()
@@ -105,4 +105,6 @@ co(function*() {
 	//cleanup stuff
 	yield client.ignoreAsync(tubes)
 	yield [ db.close(), client.quitAsync() ]
-}).catch(err => { console.error(err) })
+}
+
+co(main).catch(err => { console.error(err) })
